@@ -99,7 +99,7 @@ get_header(); ?>
 							<?php
 						  while ($mquery->have_posts()) : $mquery->the_post();
 						    //$custom=get_post_custom($mquery->ID);
-							$imagedataarr= wp_get_attachment_image_src(get_post_thumbnail_id(),'custom-full')
+							$imagedataarr= wp_get_attachment_image_src(get_post_thumbnail_id(),'thumbnail')
 						    ?>
 						    <div class="row">
 						      <div class="large-4 columns">
@@ -159,7 +159,7 @@ get_header(); ?>
 										<div class="row">
 						                  <div class="large-4 columns">
 						                    <!--<a href="<?php //echo get_permalink(); ?>"><img class="th" src="<?php //echo wp_get_attachment_image_src(get_post_thumbnail_id($my_query->ID))[0] ;?>"></a>-->
-						                    <?php $imagedataarr1 = wp_get_attachment_image_src( get_post_thumbnail_id(), 'custom-full' ); ?>
+						                    <?php $imagedataarr1 = wp_get_attachment_image_src( get_post_thumbnail_id(), 'thumbnail' ); ?>
 						                    <a href="<?php echo get_permalink(); ?>"><img class="th" src="<?php echo $imagedataarr1[0]; ?>"></a>
 						                  </div>
 						                  <div class="large-8 columns">
