@@ -55,11 +55,17 @@ get_header(); ?>
                 			<div class="featured-image">
                 				                			<?php $custom1 = get_post_custom($post->ID);
                 				                			 	$image = get_field('news_image');
+
+                				                			 	$size = 'large';
+                				                			 	$full = $image['sizes'][ $size ];
+                				                			 	$width = $image['sizes'][ $size . '-width' ];
+                				                			 	$height = $image['sizes'][ $size . '-height' ];
+
                 				                			 	$image_caption = get_field('news_image_caption');
 
                 												if( !empty($image) ){ ?>
                 													<div class="featured-image"> 
-                														<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                														<img src="<?php echo $full; ?>" alt="<?php echo $image['alt']; ?>" width="<?php echo $width; ?>" height="<?php echo $height; ?>" />
                 													 	 <?php if ( $image_caption ) : ?>
                 													 	 <p><?php echo $image_caption; ?></p>
                 													 	<?php endif; ?>
