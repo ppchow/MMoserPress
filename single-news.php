@@ -60,7 +60,9 @@ get_header(); ?>
                 												if( !empty($image) ){ ?>
                 													<div class="featured-image"> 
                 														<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-                														<p><?php echo $image_caption; ?></p>
+                													 	 <?php if ( $image_caption ) : ?>
+                													 	 <p><?php echo $image_caption; ?></p>
+                													 	<?php endif; ?>
                 													</div>
                 												<?php } ?>
                 			</div>
@@ -160,7 +162,7 @@ get_header(); ?>
 						                  <div class="large-4 columns">
 						                    <!--<a href="<?php //echo get_permalink(); ?>"><img class="th" src="<?php //echo wp_get_attachment_image_src(get_post_thumbnail_id($my_query->ID))[0] ;?>"></a>-->
 						                    <?php $imagedataarr1 = wp_get_attachment_image_src( get_post_thumbnail_id(), 'thumbnail' ); ?>
-						                    <a href="<?php echo get_permalink(); ?>"><img class="th" src="<?php echo $imagedataarr[0] ;?>" width="<?php echo $imagedataarr[1]; ?>" height="<?php echo $imagedataarr[2]; ?>"></a>
+						                    <a href="<?php echo get_permalink(); ?>"><img class="th" src="<?php echo $imagedataarr1[0] ;?>" width="<?php echo $imagedataarr1[1]; ?>" height="<?php echo $imagedataarr1[2]; ?>"></a>
 						                  </div>
 						                  <div class="large-8 columns">
 						                    <h5><?php echo the_title();?></h5>
