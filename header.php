@@ -91,7 +91,7 @@
 		          		</li>
 		          		<li class="languagelink">
 		          			<?php
-		          				dynamic_sidebar("header-sidebar-1");
+		          				 //dynamic_sidebar("header-sidebar-1");
 							 ?>
 						</li>
 		          		<li class="sharelink">

@@ -17,6 +17,10 @@
 	              <hr class="show-for-medium-down">
 	              <!--<p class="copy">&copy; 1981-2015 M Moser Associates.  All rights reserved.</p>-->
 	              <?php dynamic_sidebar("footer-sidebar-1"); ?>
+	              <?php
+	              if(pll_current_language()=="cn"){
+	              	dynamic_sidebar("header-sidebar-1");
+					?>
 	            </div>
 	            <div class="large-6 columns">
 	              <?php
